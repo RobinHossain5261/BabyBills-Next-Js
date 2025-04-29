@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-p1: #00baae;
+  --color-w1: #ffffff;
+  --color-b1: #103741;
+  --color-blue: #16c4e3;
+  --color-purpel: #c062d0;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+  --breakpoint-3xl: 1600px;
+  --breakpoint-4xl: 1800px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer components {
+  .container {
+    @apply mx-auto px-3 sm:max-w-[96%] md:max-w-[95%] xl:max-w-[1140px] xxl:max-w-[1296px];
+  }
+  .spy {
+    @apply py-10 md:py-16 lg:py-20 xl:py-[120px];
+  }
+  .spt {
+    @apply pt-10 md:pt-16 lg:pt-20 xl:pt-[120px];
+  }
+  .spb {
+    @apply pb-10 md:pb-16 lg:pb-20 xl:pb-[120px];
+  }
+  .content-center {
+    @apply flex items-center justify-center;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .display-1 {
+    @apply text-4xl font-bold leading-tight lg:text-6xl xl:text-[70px] xxl:text-[96px];
+  }
+  .display-2 {
+    @apply text-3xl font-bold leading-tight md:text-[52px] xl:text-[60px] xxl:text-[72px];
+  }
+  .display-3 {
+    @apply text-3xl font-bold leading-tight lg:text-5xl xl:text-[56px] xxl:text-[64px];
+  }
+  .display-4 {
+    @apply text-3xl xl:leading-tight lg:text-4xl xl:text-[48px] font-bold xxl:text-[56px];
+  }
+  .banner-heading {
+    @apply text-w1 text-3xl lg:text-[40px] font-bold leading-[120%] uppercase;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
