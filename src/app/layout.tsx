@@ -10,7 +10,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Babybills",
+  title: "Home - Babybills",
   description:
     "BabyBills is a modern and responsive Baby Care Store built with Next.js and Tailwind CSS. Designed with a soft, gentle aesthetic, BabyBills offers a delightful shopping experience for parents looking for trusted products for their little ones. The project includes essential features like product categories, flash sales, brand highlights, and trending products—all optimized for performance and SEO. Whether you're selling baby clothes, diapers, toys, or skincare products, BabyBills serves as a perfect template or starter for your eCommerce journey in the baby care niche.",
 };

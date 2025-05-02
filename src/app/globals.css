@@ -74,3 +74,20 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* banner swiper  pagination*/
+.bannerSwiper .swiper-pagination {
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translate(-50%) !important;
+}
+
+.bannerSwiper .swiper-pagination-bullet {
+  width: 60px !important;
+  height: 10px !important;
+  border-radius: 4px !important;
+}
+
+.bannerSwiper .swiper-pagination-bullet-active {
+  background-color: #00baae !important;
+}
