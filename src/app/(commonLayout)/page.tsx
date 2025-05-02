@@ -6,8 +6,8 @@ const HomePage = () => {
   return (
     <div>
       <h3>This is home page</h3>
-      <Image src={banner1} alt="..." />
-      <Image src={banner2} alt="..." />
+      {/* <Image src={banner1} alt="..." />
+      <Image src={banner2} alt="..." /> */}
     </div>
   );
 };

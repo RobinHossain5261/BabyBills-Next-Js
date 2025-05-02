@@ -1,12 +1,25 @@
-export const headerMenuData = [
+export type HeaderSubMenu = {
+  id: number;
+  menu: string;
+  url: string;
+};
+
+export type HeaderMenuItem = {
+  id: number;
+  name: string;
+  url?: string;
+  subMenus?: HeaderSubMenu[];
+};
+
+export const headerMenuData: HeaderMenuItem[] = [
   {
     id: 1,
     name: "Home",
-    url:'/'
+    url: "/",
   },
   {
     id: 2,
-    name: "Shops",
+    name: "Shop",
     subMenus: [
       {
         id: 1,
@@ -30,7 +43,7 @@ export const headerMenuData = [
       },
     ],
   },
-  
+
   {
     id: 3,
     name: "Pages",
@@ -58,7 +71,7 @@ export const headerMenuData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Shops",
     subMenus: [
       {
@@ -84,8 +97,8 @@ export const headerMenuData = [
     ],
   },
   {
-    id: 3,
-    name: "Shops",
+    id: 5,
+    name: "Blog",
     subMenus: [
       {
         id: 1,
@@ -100,8 +113,8 @@ export const headerMenuData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "Contact Us",
-    url:'/contact'
+    url: "/contact",
   },
 ];

@@ -28,7 +28,7 @@ export default function CategoriesSelect() {
             <RxCaretDown />
           </span>
         </ListboxButton>
-        <ListboxOptions className="absolute top-11 bg-w1 w-full px-3 py-2 rounded-lg border border-b1/20 outline-none">
+        <ListboxOptions className="absolute top-11 bg-w1 w-full px-3 py-2 rounded-lg border border-b1/20 outline-none max-h-60 overflow-y-auto z-50 shadow-lg">
           {people.map((person) => (
             <ListboxOption key={person.id} value={person} as={Fragment}>
               {({ selected }) => (
