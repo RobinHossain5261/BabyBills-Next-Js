@@ -33,7 +33,7 @@ const BannerSection = () => {
               <h2 className="display-1 text-b1">
                 New Arrivals for <span className="text-p1">Happy Babies.</span>
               </h2>
-              <p className="text-lg font-medium text-b1/90 mt-3 md:mt-5 ">
+              <p className="sec-des">
                 Explore our latest range of baby products designed to keep your
                 little one smiling, comfy, and safe.
               </p>
@@ -57,7 +57,7 @@ const BannerSection = () => {
               <h2 className="display-1 text-b1">
                 Soft Touch Care for <span className="text-p1">Your Baby.</span>
               </h2>
-              <p className="text-lg font-medium text-b1/90 mt-3 md:mt-5 ">
+              <p className="sec-des">
                 Shop thoughtfully chosen, quality products that support your
                 baby’s healthy growth and joyful moments.
               </p>
@@ -82,14 +82,14 @@ const BannerSection = () => {
                 Adorable Styles for
                 <span className="text-p1">Tiny Smiles.</span>
               </h2>
-              <p className="text-lg font-medium text-b1/90 mt-3 md:mt-5 ">
+              <p className="sec-des">
                 Explore our latest range of baby products designed to keep your
                 little one smiling, comfy, and safe.
               </p>
 
               <Link
                 href="#"
-                className="w-max flex items-center gap-2 text-w1 text-lg font-bold bg-p1 border border-p1 px-3 py-2  rounded-lg mt-6 md:mt-10"
+                className="w-max flex items-center gap-2 text-w1 text-lg font-bold bg-p1 border border-p1 px-3 py-2 rounded-lg mt-6 md:mt-10"
               >
                 Shop Now
               </Link>
