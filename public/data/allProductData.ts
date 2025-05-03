@@ -1,0 +1,98 @@
+import product1 from "@/../public/images/product1.webp";
+import product2 from "@/../public/images/product2.webp";
+import product3 from "@/../public/images/product3.webp";
+import product4 from "@/../public/images/product4.webp";
+import product5 from "@/../public/images/product5.webp";
+
+export const flashSaleProducts = [
+  {
+    id: 1,
+    label: "-30%",
+    title: "White One-Piece Dress",
+    price: 19.0,
+    oldPrice: 26.99,
+    rating: 5,
+    reviewCount: 124,
+    image: product1,
+    description: `This elegant White One-Piece Dress is designed for comfort, charm, and daily ease of use. Crafted with soft, breathable cotton, it's perfect for keeping your little one cool and stylish all day long. The clean silhouette paired with delicate stitching ensures a timeless look while providing unmatched flexibility for play or nap time. Whether it’s a birthday party, family gathering, or a cozy day at home, this dress makes a charming statement. Durable stitching and premium fabric ensure longevity through many washes, making it a must-have in every baby wardrobe.`,
+    highlights: [
+      "100% premium breathable cotton",
+      "Soft and gentle on baby's skin",
+      "Machine washable and durable",
+      "Snap closure for easy diaper changes",
+      "Available in multiple sizes (0–24 months)",
+    ],
+  },
+  {
+    id: 2,
+    label: "-15%",
+    title: "Tinci Dunt Pharetra Soda",
+    price: 30.0,
+    oldPrice: 36.99,
+    rating: 5,
+    reviewCount: 87,
+    image: product2,
+    description: `Tinci Dunt Pharetra Soda is a charming two-piece outfit designed to offer ultimate style and flexibility. Tailored with ultra-soft cotton and spandex blend, it gives babies the freedom to move, crawl, and play with joy. Featuring a modern print and neutral tones, it’s suitable for both casual outings and special occasions. This outfit is lightweight, easy to put on, and versatile enough to mix and match with other items in your baby's wardrobe.`,
+    highlights: [
+      "Modern minimalist design",
+      "Comfort-fit elastic waistband",
+      "Breathable and stretchable material",
+      "Unisex colors for mix-and-match",
+      "Fade-resistant fabric after multiple washes",
+    ],
+  },
+  {
+    id: 3,
+    label: "-19%",
+    title: "The Playtime Excitement!",
+    price: 30.0,
+    oldPrice: 39.99,
+    rating: 5,
+    reviewCount: 65,
+    image: product3,
+    description: `Make playtime extra special with this vibrant and interactive outfit! Designed for busy toddlers and crawling babies, “The Playtime Excitement!” brings both function and fun to their wardrobe. Made with soft-touch fleece lining and adorable cartoon accents, it's cozy during colder seasons and perfect for indoor activities. Parents will appreciate the long-lasting quality and the easy-to-dress design.`,
+    highlights: [
+      "Ideal for active play indoors and outdoors",
+      "Colorful design sparks imagination",
+      "Full coverage to keep baby warm",
+      "Reinforced knees for crawling",
+      "Machine washable for everyday use",
+    ],
+  },
+  {
+    id: 4,
+    label: "-14%",
+    title: "Brown Lather Carriage",
+    price: 9.0,
+    oldPrice: 16.99,
+    rating: 5,
+    reviewCount: 102,
+    image: product4,
+    description: `The Brown Lather Carriage is a luxurious accessory for babies and toddlers. Designed with high-quality faux leather, this versatile carriage bag doubles as both a stylish baby backpack and a diaper organizer. With multiple compartments and insulated pockets, it’s an essential companion for parents on the go. The waterproof surface and sturdy stitching ensure it holds up through all your family adventures.`,
+    highlights: [
+      "Spacious interior with smart compartments",
+      "Elegant faux leather finish",
+      "Water-resistant and easy to clean",
+      "Insulated pockets for bottles",
+      "Convertible straps for carry options",
+    ],
+  },
+  {
+    id: 5,
+    label: "-12%",
+    title: "Ultricies At Torquent Dui",
+    price: 12.0,
+    oldPrice: 19.99,
+    rating: 5,
+    reviewCount: 39,
+    image: product5,
+    description: `This cute and cozy bodysuit, “Ultricies At Torquent Dui,” features whimsical animal prints and a gentle cotton blend that hugs your baby's skin. It’s the perfect pick for newborns and infants who need comfort and cuteness throughout the day. With envelope-style shoulders and snap leg openings, diaper changes are a breeze. The adorable design ensures your baby is always picture-ready!`,
+    highlights: [
+      "Playful animal print graphics",
+      "Envelope neck for easy dressing",
+      "Reinforced snaps for durability",
+      "Tag-free back for comfort",
+      "Ideal gift for baby showers or new parents",
+    ],
+  },
+];

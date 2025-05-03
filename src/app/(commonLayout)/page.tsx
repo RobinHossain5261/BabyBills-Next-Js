@@ -1,12 +1,12 @@
-import banner1 from "@/../public/images/banner1.jpg";
-import banner2 from "@/../public/images/banner2.jpg";
 import BannerSection from "@/components/Pages/Home/Banner/BannerSection";
-import Image from "next/image";
+import FlashSaleSection from "@/components/Pages/Home/FlashSale/FlashSaleSection";
+
 
 const HomePage = () => {
   return (
     <div>
       <BannerSection />
+      <FlashSaleSection />
     </div>
   );
 };
