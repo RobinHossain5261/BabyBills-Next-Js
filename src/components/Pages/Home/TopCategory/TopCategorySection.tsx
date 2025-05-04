@@ -9,12 +9,12 @@ import Link from "next/link";
 
 const TopCategorySection = () => {
   return (
-    <section className="relative">
+    <section className="spb-60 relative">
       <div className="relative w-full h-[2px] bg-[#00baae1a] overflow-hidden rounded-full mx-auto">
         <div className="absolute left-[-60px] top-0 h-full w-20 rounded-full animate-soft-loader bg-gradient-to-r from-[#fc82bd80] via-[#c062d080] to-transparent"></div>
       </div>
 
-      <div className="container spy-60">
+      <div className="container spt">
         <div className="max-w-[650px] mx-auto text-center mb-8 md:mb-10 lg:mb-15">
           <h3 className="sec-heading text-center">Top Category</h3>
           <p className="sec-des">

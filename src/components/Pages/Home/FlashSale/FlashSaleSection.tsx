@@ -14,7 +14,7 @@ const FlashSaleSection = () => {
   return (
     <section className="spy-60 relative overflow-hidden">
       <div className="container">
-        <div className="flex flex-wrap items-center justify-between gap-2 md:gap-3 mb-5 md:mb-8 mb-lg">
+        <div className="flex flex-wrap items-center justify-between gap-2 md:gap-3 mb-5 md:mb-8 lg:mb-15">
           <h3 className="sec-heading">Flash Sale</h3>
           <CountdownTimer />
         </div>
