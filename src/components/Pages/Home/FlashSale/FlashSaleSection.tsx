@@ -12,7 +12,7 @@ import shape1 from "@/../public/images/shape1.webp";
 
 const FlashSaleSection = () => {
   return (
-    <section className="spy relative overflow-hidden">
+    <section className="spy-60 relative overflow-hidden">
       <div className="container">
         <div className="flex flex-wrap items-center justify-between gap-2 md:gap-3 mb-5 md:mb-8 mb-lg">
           <h3 className="sec-heading">Flash Sale</h3>
@@ -95,7 +95,7 @@ const FlashSaleSection = () => {
 
         <Link
           href="#"
-          className="w-max mx-auto flex items-center gap-2 text-w1 text-lg font-bold bg-p1 border border-p1 px-3 py-2 rounded-lg mt-8 md:mt-10 lg:mt-15"
+          className="w-max mx-auto flex items-center gap-2 text-w1 text-lg font-bold bg-p1 border border-p1 px-3 py-2 rounded-lg mt-6 md:mt-8 lg:mt-10"
         >
           View All
         </Link>

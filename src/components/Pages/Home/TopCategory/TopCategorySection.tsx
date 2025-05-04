@@ -2,13 +2,19 @@ import towal from "@/../public/images/towel.webp";
 import kit from "@/../public/images/kit.webp";
 import tub from "@/../public/images/tub.webp";
 import toys from "@/../public/images/toys.webp";
+import doll from "@/../public/images/doll.png";
+import abc from "@/../public/images/abc.png";
 import Image from "next/image";
 import Link from "next/link";
 
 const TopCategorySection = () => {
   return (
-    <section className="spb">
-      <div className="container">
+    <section className="relative">
+      <div className="relative w-full h-[2px] bg-[#00baae1a] overflow-hidden rounded-full mx-auto">
+        <div className="absolute left-[-60px] top-0 h-full w-20 rounded-full animate-soft-loader bg-gradient-to-r from-[#fc82bd80] via-[#c062d080] to-transparent"></div>
+      </div>
+
+      <div className="container spy-60">
         <div className="max-w-[650px] mx-auto text-center mb-8 md:mb-10 lg:mb-15">
           <h3 className="sec-heading text-center">Top Category</h3>
           <p className="sec-des">
@@ -71,6 +77,20 @@ const TopCategorySection = () => {
               </h3>
             </div>
           </Link>
+        </div>
+
+        {/* animation icon  */}
+        <div>
+          <Image
+            src={doll}
+            alt="doll"
+            className="hidden lg:block doll-animation absolute left-[3%]"
+          />
+          <Image
+            src={abc}
+            alt="abc"
+            className="hidden lg:block ripple-animation2 absolute right-15 xl:right-[15%] top-15"
+          />
         </div>
       </div>
     </section>

@@ -23,13 +23,22 @@
     @apply mx-auto px-3 sm:max-w-[96%] md:max-w-[95%] xl:max-w-[1140px] xxl:max-w-[1296px];
   }
   .spy {
-    @apply py-10 md:py-16 lg:py-20 xl:py-[120px];
+    @apply py-10 md:py-16 lg:py-20 xl:py-30;
   }
   .spt {
-    @apply pt-10 md:pt-16 lg:pt-20 xl:pt-[120px];
+    @apply pt-10 md:pt-16 lg:pt-20 xl:pt-30;
   }
   .spb {
-    @apply pb-10 md:pb-16 lg:pb-20 xl:pb-[120px];
+    @apply pb-10 md:pb-16 lg:pb-20 xl:pb-30;
+  }
+  .spy-60 {
+    @apply py-8 md:py-10 lg:py-12 xl:py-15;
+  }
+  .spt-60 {
+    @apply pt-8 md:pt-10 lg:pt-12 xl:pt-15;
+  }
+  .spb-60 {
+    @apply pb-8 md:pb-10 lg:pb-12 xl:pb-15;
   }
   .content-center {
     @apply flex items-center justify-center;
@@ -97,9 +106,12 @@ body {
   background-color: #00baae !important;
 }
 
-/* animation  */
+/*ripple animation  */
 .ripple-animation {
   animation: ripple 5s ease-in-out infinite;
+}
+.ripple-animation2 {
+  animation: ripple2 7s ease-in-out infinite;
 }
 
 @keyframes ripple {
@@ -114,4 +126,49 @@ body {
     transform: scale(1.8);
     opacity: 0;
   }
+}
+@keyframes ripple2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.doll-animation {
+  animation: dollRun 5s ease-in-out infinite;
+}
+
+@keyframes dollRun {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 60px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* section border animation */
+@keyframes soft-loader {
+  0% {
+    left: -60px;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+.animate-soft-loader {
+  animation: soft-loader 3s ease-in-out infinite;
 }
