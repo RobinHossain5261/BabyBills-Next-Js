@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PopularProduct = () => {
   return (
-    <section className="">
+    <section>
       <div className="relative w-full h-[2px] bg-[#00baae1a] overflow-hidden rounded-full mx-auto">
         <div className="absolute left-[-60px] top-0 h-full w-20 rounded-full animate-soft-loader bg-gradient-to-r from-[#fc82bd80] via-[#c062d080] to-transparent"></div>
       </div>

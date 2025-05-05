@@ -5,6 +5,7 @@
   --color-p2: #05897e;
   --color-w1: #ffffff;
   --color-b1: #103741;
+  --color-y1: #f7b602;
   --color-blue: #16c4e3;
   --color-purpel: #c062d0;
   --color-pink: #fc82bd;
@@ -103,6 +104,11 @@ body {
 }
 
 .bannerSwiper .swiper-pagination-bullet-active {
+  background-color: #00baae !important;
+}
+
+/* Testimonial swiper */
+.swiper-pagination-progressbar-fill {
   background-color: #00baae !important;
 }
 
