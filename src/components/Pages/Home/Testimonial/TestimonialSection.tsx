@@ -9,12 +9,37 @@ import client1 from "@/../public/images/client1.jpg";
 import client2 from "@/../public/images/client2.jpg";
 import client3 from "@/../public/images/client3.jpg";
 import { RxStarFilled } from "react-icons/rx";
+import { Satisfy } from "next/font/google";
 
 const clientsImg = [client1, client2, client3, client1];
 
+const testimonials = [
+  {
+    id: 1,
+    name: "Emily Rodriguez",
+    say: "I was so nervous about choosing the right products for my newborn, but this store made it easy. The quality is amazing, and everything feels so gentle on my baby's skin. I’m a loyal customer now!",
+    img: client1,
+    desig: "First-Time Mom",
+  },
+  {
+    id: 2,
+    name: "Jasmine Lee",
+    say: "As a nurse and a mom, I’m picky about what touches my baby’s skin. This store checks all the boxes: safe, clean, and beautifully designed. I recommend it to all my patients!",
+    img: client3,
+    desig: "Pediatric Nurse & Mom",
+  },
+  {
+    id: 3,
+    name: "Mark Johnson",
+    say: "Being a single dad, I needed reliable baby products that wouldn’t let me down. The shipping was fast, and the products exceeded my expectations. Thank you for making this journey easier!",
+    img: client2,
+    desig: "Single Dad",
+  },
+];
+
 const TestimonialSection = () => {
   return (
-    <section className="">
+    <section>
       <div className="relative w-full h-[2px] bg-[#00baae1a] overflow-hidden rounded-full mx-auto">
         <div className="absolute left-[-60px] top-0 h-full w-20 rounded-full animate-soft-loader bg-gradient-to-r from-[#fc82bd80] via-[#c062d080] to-transparent"></div>
       </div>
@@ -63,138 +88,36 @@ const TestimonialSection = () => {
               modules={[Autoplay, Pagination, Navigation, Mousewheel]}
               className="mySwiper "
             >
-              <SwiperSlide>
-                <div className="bg-p1 p-3 md:p-6 rounded-xl">
-                  <div className="flex items-center gap-1 mb-3 md:mb-5">
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                  </div>
-                  <p className="sec-des text-w1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                    vel, deserunt ipsam eius tenetur dolorum vitae eum dolor
-                    illo quisquam excepturi, quas distinctio nemo velit adipisci
-                    debitis fuga ipsum eveniet.
-                  </p>
+              {testimonials.map(({ id, name, say, desig, img }) => (
+                <SwiperSlide>
+                  <div key={id} className="bg-p1 p-3 md:p-6 rounded-xl">
+                    <div className="flex items-center gap-1 mb-3 md:mb-5">
+                      <PiStarFill className="text-y1 text-3xl" />
+                      <PiStarFill className="text-y1 text-3xl" />
+                      <PiStarFill className="text-y1 text-3xl" />
+                      <PiStarFill className="text-y1 text-3xl" />
+                      <PiStarFill className="text-y1 text-3xl" />
+                    </div>
+                    <p className="sec-des text-w1">{say}</p>
 
-                  <div className="flex items-center gap-2 mt-3 md:mt-5">
-                    <Image
-                      src={client1}
-                      alt="client"
-                      className="size-14 rounded-full"
-                    />
-                    <div>
-                      <span className="text-lg md:text-xl font-semibold text-w1 block">
-                        Name
-                      </span>
-                      <span className="text-base font-medium text-w1">
-                        designation
-                      </span>
+                    <div className="flex items-center gap-2 mt-3 md:mt-5">
+                      <Image
+                        src={img}
+                        alt="client"
+                        className="size-14 rounded-full"
+                      />
+                      <div>
+                        <span className="text-lg md:text-xl font-semibold text-w1 block">
+                          {name}
+                        </span>
+                        <span className="text-base font-medium text-w1">
+                          {desig}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="bg-p1 p-3 md:p-6 rounded-xl">
-                  <div className="flex items-center gap-1 mb-3 md:mb-5">
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                  </div>
-                  <p className="sec-des text-w1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                    vel, deserunt ipsam eius tenetur dolorum vitae eum dolor
-                    illo quisquam excepturi, quas distinctio nemo velit adipisci
-                    debitis fuga ipsum eveniet.
-                  </p>
-
-                  <div className="flex items-center gap-2 mt-3 md:mt-5">
-                    <Image
-                      src={client1}
-                      alt="client"
-                      className="size-14 rounded-full"
-                    />
-                    <div>
-                      <span className="text-lg md:text-xl font-semibold text-w1 block">
-                        Name
-                      </span>
-                      <span className="text-base font-medium text-w1">
-                        designation
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="bg-p1 p-3 md:p-6 rounded-xl">
-                  <div className="flex items-center gap-1 mb-3 md:mb-5">
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                  </div>
-                  <p className="sec-des text-w1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                    vel, deserunt ipsam eius tenetur dolorum vitae eum dolor
-                    illo quisquam excepturi, quas distinctio nemo velit adipisci
-                    debitis fuga ipsum eveniet.
-                  </p>
-
-                  <div className="flex items-center gap-2 mt-3 md:mt-5">
-                    <Image
-                      src={client1}
-                      alt="client"
-                      className="size-14 rounded-full"
-                    />
-                    <div>
-                      <span className="text-lg md:text-xl font-semibold text-w1 block">
-                        Name
-                      </span>
-                      <span className="text-base font-medium text-w1">
-                        designation
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="bg-p1 p-3 md:p-6 rounded-xl">
-                  <div className="flex items-center gap-1 mb-3 md:mb-5">
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                    <PiStarFill className="text-y1 text-3xl" />
-                  </div>
-                  <p className="sec-des text-w1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                    vel, deserunt ipsam eius tenetur dolorum vitae eum dolor
-                    illo quisquam excepturi, quas distinctio nemo velit adipisci
-                    debitis fuga ipsum eveniet.
-                  </p>
-
-                  <div className="flex items-center gap-2 mt-3 md:mt-5">
-                    <Image
-                      src={client1}
-                      alt="client"
-                      className="size-14 rounded-full"
-                    />
-                    <div>
-                      <span className="text-lg md:text-xl font-semibold text-w1 block">
-                        Name
-                      </span>
-                      <span className="text-base font-medium text-w1">
-                        designation
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
 
               <div className="mt-5 md:mt-10 flex gap-4 items-center">
                 <div className="flex md:justify-end gap-3 w-max">
@@ -212,33 +135,34 @@ const TestimonialSection = () => {
           <div className="col-span-12 md:col-span-5 lg:col-span-4">
             <div className="content-center h-full w-full bg-purpel/50 rounded-xl p-5">
               <div className="text-center">
+                <div className="flex gap-2 items-center mb-5">
+                  <RxStarFilled className="text-5xl xl:text-7xl text-[#02b57a]" />
+                  <h5 className="text-3xl md:text-4xl xl:text-5xl font-bold text-w1">
+                    Trustpilot
+                  </h5>
+                </div>
 
-              <div className="flex gap-2 items-center mb-5">
-                <RxStarFilled className="text-5xl xl:text-7xl text-[#02b57a]" />
-                <h5 className="text-3xl md:text-4xl xl:text-5xl font-bold text-w1">
-                  Trustpilot
-                </h5>
-              </div>
-
-              <div className="flex items-center justify-center gap-1 mb-1">
-                <PiStarFill className="text-p2 text-2xl" />
-                <PiStarFill className="text-p2 text-2xl" />
-                <PiStarFill className="text-p2 text-2xl" />
-                <PiStarFill className="text-p2 text-2xl" />
-                <PiStarFill className="text-p2 text-2xl" />
-              </div>
-              <span className="font-medium text-lg">Reviews 25,575</span>
-              <div className="flex justify-center mt-5 md:mt-8">
-                {clientsImg.map((img, idx) => (
-                  <Image
-                    key={idx}
-                    src={img}
-                    alt="client"
-                    className="size-12 border-2 border-w1 rounded-full -ml-4 first:ml-0"
-                  />
-                ))}
-                <div className="size-12 bg-y1 border-2 border-w1 rounded-full content-center -ml-4 font-medium">20k</div>
-              </div>
+                <div className="flex items-center justify-center gap-1 mb-1">
+                  <PiStarFill className="text-p2 text-2xl" />
+                  <PiStarFill className="text-p2 text-2xl" />
+                  <PiStarFill className="text-p2 text-2xl" />
+                  <PiStarFill className="text-p2 text-2xl" />
+                  <PiStarFill className="text-p2 text-2xl" />
+                </div>
+                <span className="font-medium text-sm">Reviews 25,575</span>
+                <div className="flex justify-center mt-5 md:mt-8">
+                  {clientsImg.map((img, idx) => (
+                    <Image
+                      key={idx}
+                      src={img}
+                      alt="client"
+                      className="size-12 border-2 border-w1 rounded-full -ml-4 first:ml-0"
+                    />
+                  ))}
+                  <div className="size-12 bg-y1 border-2 border-w1 rounded-full content-center -ml-4 font-medium">
+                    20k
+                  </div>
+                </div>
               </div>
             </div>
           </div>
