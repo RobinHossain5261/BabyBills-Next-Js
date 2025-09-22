@@ -105,7 +105,7 @@ const Navbar = () => {
                   className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
                 >
                   <PiHeart />
-                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
+                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 f-center">
                     4
                   </span>
                 </Link>
@@ -115,7 +115,7 @@ const Navbar = () => {
                   className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
                 >
                   <PiShoppingCart />
-                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
+                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 f-center">
                     4
                   </span>
                 </Link>
@@ -145,7 +145,7 @@ const Navbar = () => {
                           }`}
                         >
                           <span>{name}</span>
-                          <span className="content-center group-hover:-rotate-180 duration-300">
+                          <span className="f-center group-hover:-rotate-180 duration-300">
                             <PiCaretDown />
                           </span>
                         </div>
@@ -238,7 +238,9 @@ const Navbar = () => {
                             <Link
                               href={url}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className={`text-base text-b1 hover:text-p1 hover:ml-1 duration-300  block leading-[150%] ${path===url ? "text-p1":""}`}
+                              className={`text-base text-b1 hover:text-p1 hover:ml-1 duration-300  block leading-[150%] ${
+                                path === url ? "text-p1" : ""
+                              }`}
                             >
                               {menu}
                             </Link>

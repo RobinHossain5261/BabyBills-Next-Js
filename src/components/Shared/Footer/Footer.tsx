@@ -20,25 +20,25 @@ const Footer = () => {
             <div className="flex gap-3  items-center mt-5 md:mt-8 ">
               <Link
                 href="#"
-                className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
+                className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
               >
                 <FaFacebook />
               </Link>
               <Link
                 href="#"
-                className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
+                className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
               >
                 <RiInstagramFill />
               </Link>
               <Link
                 href="#"
-                className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
+                className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
               >
                 <FaYoutube />
               </Link>
               <Link
                 href="#"
-                className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
+                className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 border border-w1/80 p-1 rounded-lg"
               >
                 <FaLinkedin />
               </Link>
@@ -112,15 +112,15 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <div className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
-                <MdLocationPin />
+                <div className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
+                  <MdLocationPin />
                 </div>
                 <span className="text-lg text-w1/90 hover:text-w1 hover:font-semibold hover:ml-1 duration-300">
                   Gyan Singh Market, Sector 22 Noida, UP 201301
                 </span>
               </div>
               <Link href="tel:+18475555555" className="flex items-center gap-2">
-                <div className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
+                <div className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
                   <MdHeadsetMic />
                 </div>
                 <span className="text-lg text-w1/90 hover:text-w1 hover:font-semibold hover:ml-1 duration-300">
@@ -131,7 +131,7 @@ const Footer = () => {
                 href="mailto:someone@example.com"
                 className="flex items-center gap-2"
               >
-                <div className="content-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
+                <div className="f-center text-xl md:text-2xl text-w1 hover:text-p2 hover:bg-w1/80 duration-300 rounded-lg  p-1 border border-w1/80">
                   <PiEnvelopeFill />
                 </div>
                 <span className="text-lg text-w1/90 hover:text-w1 hover:font-semibold hover:ml-1 duration-300">

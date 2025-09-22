@@ -61,7 +61,7 @@ const ShopPage = () => {
             <div className="flex items-center gap-2">
               <div
                 onClick={() => setViewType("list")}
-                className={`w-10 h-10 content-center  border border-p1 text-xl font-bold rounded-full cursor-pointer ${
+                className={`w-10 h-10 f-center  border border-p1 text-xl font-bold rounded-full cursor-pointer ${
                   viewType === "list" ? "bg-p1 text-w1" : "border-p1 text-p1"
                 }`}
               >
@@ -69,7 +69,7 @@ const ShopPage = () => {
               </div>
               <div
                 onClick={() => setViewType("grid")}
-                className={`w-10 h-10 content-center border text-xl font-bold rounded-full cursor-pointer ${
+                className={`w-10 h-10 f-center border text-xl font-bold rounded-full cursor-pointer ${
                   viewType === "grid" ? "bg-p1 text-w1" : "border-p1 text-p1"
                 }`}
               >
@@ -179,7 +179,7 @@ const ShopPage = () => {
             <button
               disabled={currentPage === 1}
               onClick={() => handlePageChange(currentPage - 1)}
-              className="w-10 h-10 content-center border border-p1 text-xl font-bold rounded-full cursor-pointer"
+              className="w-10 h-10 f-center border border-p1 text-xl font-bold rounded-full cursor-pointer"
             >
               <GrFormPrevious />
             </button>
@@ -187,7 +187,7 @@ const ShopPage = () => {
               <button
                 key={index}
                 onClick={() => handlePageChange(index + 1)}
-                className={`w-10 h-10 content-center border border-p1 hover:border-p2 text-xl font-bold rounded-full cursor-pointer ${
+                className={`w-10 h-10 f-center border border-p1 hover:border-p2 text-xl font-bold rounded-full cursor-pointer ${
                   currentPage === index + 1 ? "bg-p1 text-w1" : ""
                 }`}
               >
@@ -196,7 +196,7 @@ const ShopPage = () => {
             ))}
             <button
               onClick={() => handlePageChange(currentPage + 1)}
-              className="w-10 h-10 content-center border border-p1 text-xl font-bold rounded-full cursor-pointer"
+              className="w-10 h-10 f-center border border-p1 text-xl font-bold rounded-full cursor-pointer"
             >
               <GrFormNext />
             </button>

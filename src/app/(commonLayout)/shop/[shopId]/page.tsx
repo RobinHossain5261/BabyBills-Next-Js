@@ -59,14 +59,14 @@ const ShopDetails = ({ params }: { params: Promise<{ shopId: string }> }) => {
             <div className=" flex items-center gap-3 mt-5 md:mt-8 lg:mt-10">
               <div className="w-36 border border-p1/50 py-1 md:py-2 px-2 md:px-3 rounded-full flex items-center justify-between gap-5">
                 <span
-                  className="size-8 bg-b1 rounded-full text-w1 content-center cursor-pointer"
+                  className="size-8 bg-b1 rounded-full text-w1 f-center cursor-pointer"
                   onClick={decrement}
                 >
                   <FiMinus size={24} />
                 </span>
                 <span className="text-2xl font-bold">{count}</span>
                 <span
-                  className="size-8 bg-b1 rounded-full text-w1 content-center cursor-pointer"
+                  className="size-8 bg-b1 rounded-full text-w1 f-center cursor-pointer"
                   onClick={increment}
                 >
                   <FiPlus size={24} />

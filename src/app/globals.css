@@ -10,6 +10,7 @@
   --color-purpel: #c062d0;
   --color-pink: #fc82bd;
 
+
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
@@ -41,7 +42,7 @@
   .spb-60 {
     @apply pb-8 md:pb-10 lg:pb-12 xl:pb-15;
   }
-  .content-center {
+  .f-center {
     @apply flex items-center justify-center;
   }
   .sec-heading {

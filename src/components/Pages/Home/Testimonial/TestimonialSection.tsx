@@ -133,7 +133,7 @@ const TestimonialSection = () => {
             </Swiper>
           </div>
           <div className="col-span-12 md:col-span-5 lg:col-span-4">
-            <div className="content-center h-full w-full bg-purpel/50 rounded-xl p-5">
+            <div className="f-center h-full w-full bg-purpel/50 rounded-xl p-5">
               <div className="text-center">
                 <div className="flex gap-2 items-center mb-5">
                   <RxStarFilled className="text-5xl xl:text-7xl text-[#02b57a]" />
@@ -159,7 +159,7 @@ const TestimonialSection = () => {
                       className="size-12 border-2 border-w1 rounded-full -ml-4 first:ml-0"
                     />
                   ))}
-                  <div className="size-12 bg-y1 border-2 border-w1 rounded-full content-center -ml-4 font-medium">
+                  <div className="size-12 bg-y1 border-2 border-w1 rounded-full f-center -ml-4 font-medium">
                     20k
                   </div>
                 </div>
