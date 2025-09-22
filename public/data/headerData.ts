@@ -15,7 +15,18 @@ export const headerMenuData: HeaderMenuItem[] = [
   {
     id: 1,
     name: "Home",
-    url: "/",
+    subMenus: [
+      {
+        id: 1,
+        menu: "Home-1",
+        url: "/",
+      },
+      {
+        id: 2,
+        menu: "Home-2",
+        url: "/home-two",
+      },
+    ],
   },
   {
     id: 2,

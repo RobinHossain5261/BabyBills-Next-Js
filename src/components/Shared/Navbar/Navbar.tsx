@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 const Navbar = () => {
   const path = usePathname();
   const refOne = useRef(null);
+  const [fixedHeader, setFixedHeader] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [toggle, setToggle] = useState<null | number>(null);
 
@@ -36,6 +37,16 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setFixedHeader(true);
+      } else {
+        setFixedHeader(false);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
     return () => {
       document.body.removeEventListener("click", handleClickOutside);
@@ -48,107 +59,123 @@ const Navbar = () => {
           We have Special Announcement - Shop from the Best range of Prodects
         </p>
       </div>
-      <div className="bg-p1  py-5">
-        <div className="container flex flex-wrap lg:flex-nowrap justify-between items-center gap-3">
-          <div className="w-full lg:w-max flex items-center justify-between gap-3">
-            <Link href="/">
-              <h3 className="text-3xl font-bold text-w1">BabyBills</h3>
-            </Link>
-            <div className="flex gap-3 items-center">
-              <Link
-                href="/login"
-                className="block lg:hidden bg-w1  text-b1 text-lg font-medium px-3 py-2 rounded-lg"
-              >
-                Login
+      <div
+        className={`${
+          fixedHeader ? "fixed top-0 z-[9999] w-full header-animation" : ""
+        }`}
+      >
+        <div className="bg-p1  py-5">
+          <div className="container flex flex-wrap lg:flex-nowrap justify-between items-center gap-3">
+            <div className="w-full lg:w-max flex items-center justify-between gap-3">
+              <Link href="/">
+                <h3 className="text-3xl font-bold text-w1">BabyBills</h3>
               </Link>
-              <span
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden block bg-w1 text-2xl  p-2 rounded-lg cursor-pointer"
-              >
-                <PiListBold />
-              </span>
+              <div className="flex gap-3 items-center">
+                <Link
+                  href="/login"
+                  className="block lg:hidden bg-w1  text-b1 text-lg font-medium px-3 py-2 rounded-lg"
+                >
+                  Login
+                </Link>
+                <span
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="md:hidden block bg-w1 text-2xl  p-2 rounded-lg cursor-pointer"
+                >
+                  <PiListBold />
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-full lg:w-max flex items-center justify-between gap-2 md:gap-3">
-            <CustomSelect />
-            <div className="w-full sm:w-max flex items-center justify-between gap-2 md:gap-3">
-              <form className="w-full xl:w-[600px] bg-w1 px-2 flex items-center gap-1 rounded-lg">
-                <label className="text-2xl text-b1/50">
-                  <PiMagnifyingGlass />
-                </label>
-                <input
-                  type="search"
-                  name=""
-                  id=""
-                  className="bg-w1 py-2 px-3 outline-none w-full"
-                />
-              </form>
+            <div className="w-full  flex items-center justify-between gap-2 md:gap-3">
+              <CustomSelect />
+              <div className="w-full sm:w-max flex items-center justify-between gap-2 md:gap-3">
+                <form className="w-full xl:w-[400px] bg-w1 px-2 flex items-center gap-1 rounded-lg">
+                  <label className="text-2xl text-b1/50">
+                    <PiMagnifyingGlass />
+                  </label>
+                  <input
+                    type="search"
+                    name=""
+                    id=""
+                    className="bg-w1 py-2 px-3 outline-none w-full"
+                  />
+                </form>
 
-              <Link
-                href="/wishlist"
-                className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
-              >
-                <PiHeart />
-                <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
-                  4
-                </span>
-              </Link>
+                <Link
+                  href="/wishlist"
+                  className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
+                >
+                  <PiHeart />
+                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
+                    4
+                  </span>
+                </Link>
 
-              <Link
-                href="/cart"
-                className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
-              >
-                <PiShoppingCart />
-                <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
-                  4
-                </span>
-              </Link>
+                <Link
+                  href="/cart"
+                  className="hidden md:block bg-w1 text-2xl  p-2 rounded-lg relative"
+                >
+                  <PiShoppingCart />
+                  <span className="bg-purpel text-w1 text-sm  size-5 rounded-full absolute -top-2 -right-2 content-center">
+                    4
+                  </span>
+                </Link>
 
-              <Link
-                href="/login"
-                className="hidden lg:block bg-w1  text-b1 text-lg font-medium px-3 py-2 rounded-lg"
-              >
-                Login
-              </Link>
+                <Link
+                  href="/login"
+                  className="hidden lg:block bg-w1  text-b1 text-lg font-medium px-3 py-2 rounded-lg"
+                >
+                  Login
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+        <nav className="hidden md:block bg-w1 py-5 shadow-lg">
+          <div className="container text-center">
+            <div className="flex items-center justify-center gap-5 xl:gap-8 text-xl font-medium">
+              {headerMenuData.map(({ id, name, subMenus, url }) => {
+                const isActive = subMenus?.some((item) => path === item.url);
+                return (
+                  <ul key={id}>
+                    {subMenus ? (
+                      <li className="relative group">
+                        <div
+                          className={`flex items-center gap-1 hover:text-p1 duration-300 cursor-pointer ${
+                            isActive ? "text-p1" : ""
+                          }`}
+                        >
+                          <span>{name}</span>
+                          <span className="content-center group-hover:-rotate-180 duration-300">
+                            <PiCaretDown />
+                          </span>
+                        </div>
+                        <ul
+                          className={`bg-w1 w-max text-start absolute z-5 invisible opacity-0 translate-y-8 scale-75 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 duration-300 px-3 py-2 border border-p1/10 pointer-events-none group-hover:pointer-events-auto rounded space-y-0.5`}
+                        >
+                          {subMenus.map(({ menu, id, url }) => (
+                            <li
+                              key={id}
+                              className={`hover:text-p1 duration-300 ${
+                                path === url ? "text-p1" : ""
+                              }`}
+                            >
+                              <Link href={url}>{menu}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : (
+                      <li className="hover:text-p1 duration-300">
+                        <Link href={url || "#"}>{name}</Link>
+                      </li>
+                    )}
+                  </ul>
+                );
+              })}
+            </div>
+          </div>
+        </nav>
       </div>
-      <nav className="hidden md:block bg-w1 py-5 shadow-lg">
-        <div className="container text-center">
-          <div className="flex items-center justify-center gap-5 xl:gap-8 text-xl font-medium">
-            {headerMenuData.map(({ id, name, subMenus, url }) => {
-              return (
-                <ul key={id}>
-                  {subMenus ? (
-                    <li className="relative group">
-                      <div className="flex items-center gap-1 hover:text-p1 duration-300 cursor-pointer">
-                        <span>{name}</span>
-                        <span className="content-center group-hover:-rotate-180 duration-300">
-                          <PiCaretDown />
-                        </span>
-                      </div>
-                      <ul
-                        className={`bg-w1 w-max text-start absolute z-5 invisible opacity-0 translate-y-8 scale-75 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 duration-300 px-3 py-2 border border-p1/10 pointer-events-none group-hover:pointer-events-auto rounded space-y-0.5`}
-                      >
-                        {subMenus.map(({ menu, id, url }) => (
-                          <li key={id} className="hover:text-p1 duration-300">
-                            <Link href={url}>{menu}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ) : (
-                    <li className="hover:text-p1 duration-300">
-                      <Link href={url || "#"}>{name}</Link>
-                    </li>
-                  )}
-                </ul>
-              );
-            })}
-          </div>
-        </div>
-      </nav>
 
       {/* responsive menu */}
       <div
@@ -178,13 +205,16 @@ const Navbar = () => {
         </div>
         <div className="flex gap-5 flex-col mt-10">
           {headerMenuData.map(({ id, name, subMenus, url }, idx) => {
+            const isActive = subMenus?.some((item) => path === item.url);
             return (
               <ul key={id}>
                 {subMenus ? (
                   <li className="border-y border-b1/20 p-3 rounded">
                     <div
                       onClick={() => handleToggle(idx)}
-                      className="flex gap-1 justify-between items-center cursor-pointer text-b1 hover:text-p1 duration-300"
+                      className={`flex gap-1 justify-between items-center cursor-pointer text-b1 hover:text-p1 duration-300 ${
+                        isActive ? "text-p1" : ""
+                      }`}
                     >
                       <span className="  text-base font-semibold uppercase leading-[150%]">
                         {name}
@@ -208,7 +238,7 @@ const Navbar = () => {
                             <Link
                               href={url}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="text-base text-b1 hover:text-p1 hover:ml-1 duration-300  block leading-[150%]"
+                              className={`text-base text-b1 hover:text-p1 hover:ml-1 duration-300  block leading-[150%] ${path===url ? "text-p1":""}`}
                             >
                               {menu}
                             </Link>

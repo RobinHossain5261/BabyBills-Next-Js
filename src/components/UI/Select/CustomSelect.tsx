@@ -3,11 +3,10 @@ import { useState, useRef, useEffect } from "react";
 import { PiCaretDown } from "react-icons/pi";
 
 const catagories = [
-  "Durward Reynolds",
-  "Kenton Towne",
-  "Therese Wunsch",
-  "Benedict Kessler",
-  "Katelyn Rohan",
+  "Baby Towel",
+  "Baby Kit",
+  "Baby Tub",
+  "Baby Toys",
 ];
 
 export default function CustomSelect() {

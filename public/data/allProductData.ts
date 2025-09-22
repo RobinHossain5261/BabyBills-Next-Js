@@ -9,7 +9,7 @@ import product8 from "@/../public/images/product8.webp";
 
 export const flashSaleProducts = [
   {
-    id: 1,
+    id: "1",
     label: "-30%",
     title: "White One-Piece Dress",
     price: 19.0,
@@ -27,7 +27,7 @@ export const flashSaleProducts = [
     ],
   },
   {
-    id: 2,
+    id: "2",
     label: "-15%",
     title: "Tinci Dunt Pharetra Soda",
     price: 30.0,
@@ -45,7 +45,7 @@ export const flashSaleProducts = [
     ],
   },
   {
-    id: 3,
+    id: "3",
     label: "-19%",
     title: "The Playtime Excitement!",
     price: 30.0,
@@ -63,7 +63,7 @@ export const flashSaleProducts = [
     ],
   },
   {
-    id: 4,
+    id: "4",
     label: "-14%",
     title: "Brown Lather Carriage",
     price: 9.0,
@@ -81,7 +81,7 @@ export const flashSaleProducts = [
     ],
   },
   {
-    id: 5,
+    id: "5",
     label: "-12%",
     title: "Ultricies At Torquent Dui",
     price: 12.0,
@@ -102,10 +102,10 @@ export const flashSaleProducts = [
 
 export const popularProducts = [
   {
-    id: 6,
+    id: "6",
     label: "-35%",
     title: "Bambo Floor Seat",
-    price: 510.0,
+    price: 509.99,
     oldPrice: 560.99,
     rating: 5,
     reviewCount: 124,
@@ -120,10 +120,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 7,
+    id: "7",
     label: "-25%",
     title: "Zebra Walker",
-    price: 210.0,
+    price: 210.99,
     oldPrice: 260.99,
     rating: 5,
     reviewCount: 104,
@@ -138,10 +138,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 8,
+    id: "8",
     label: "-32%",
     title: "Homey Bee Teether",
-    price: 310.0,
+    price: 310.99,
     oldPrice: 360.99,
     rating: 5,
     reviewCount: 114,
@@ -156,10 +156,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 1,
+    id: "1",
     label: "-30%",
     title: "White One-Piece Dress",
-    price: 19.0,
+    price: 19.99,
     oldPrice: 26.99,
     rating: 5,
     reviewCount: 124,
@@ -174,10 +174,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 2,
+    id: "2",
     label: "-15%",
     title: "Tinci Dunt Pharetra Soda",
-    price: 30.0,
+    price: 30.99,
     oldPrice: 36.99,
     rating: 5,
     reviewCount: 87,
@@ -192,10 +192,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 3,
+    id: "3",
     label: "-19%",
     title: "The Playtime Excitement!",
-    price: 30.0,
+    price: 30.99,
     oldPrice: 39.99,
     rating: 5,
     reviewCount: 65,
@@ -210,10 +210,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 4,
+    id: "4",
     label: "-14%",
     title: "Brown Lather Carriage",
-    price: 9.0,
+    price: 9.99,
     oldPrice: 16.99,
     rating: 5,
     reviewCount: 102,
@@ -228,10 +228,10 @@ export const popularProducts = [
     ],
   },
   {
-    id: 5,
+    id: "5",
     label: "-12%",
     title: "Ultricies At Torquent Dui",
-    price: 12.0,
+    price: 12.99,
     oldPrice: 19.99,
     rating: 5,
     reviewCount: 39,
