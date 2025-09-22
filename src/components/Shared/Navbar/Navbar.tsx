@@ -165,7 +165,7 @@ const Navbar = () => {
                         </ul>
                       </li>
                     ) : (
-                      <li className="hover:text-p1 duration-300">
+                      <li className={`hover:text-p1 duration-300 ${path === url ? "text-p1" : ""}`}>
                         <Link href={url || "#"}>{name}</Link>
                       </li>
                     )}
@@ -254,7 +254,7 @@ const Navbar = () => {
                     <Link
                       href={url || "#"}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-b1 hover:text-p1 duration-300 text-base font-semibold uppercase leading-[150%] block`}
+                      className={`text-b1 hover:text-p1 duration-300 text-base font-semibold uppercase leading-[150%] block  ${path === url ? "text-p1" : ""}`}
                     >
                       {name}
                     </Link>
